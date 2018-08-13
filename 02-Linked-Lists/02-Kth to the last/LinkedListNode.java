@@ -10,6 +10,16 @@ public class LinkedListNode {
         }
     }
 
+    public int getLength() {
+        Node ptr = head;
+        int count = 0;
+        while(ptr != null) {
+            ptr = ptr.next;
+            count++;
+        }
+        return count;
+    }
+
     public void insertList(int[] a) {
         for(int i = 0; i < a.length; i++) {
             this.insert(a[i]);
